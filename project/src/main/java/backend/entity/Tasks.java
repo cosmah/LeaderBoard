@@ -6,21 +6,19 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-@Document(collection = "performance")
-public class Performance {
+@Document(collection = "tasks")
+public class Tasks {
     @Id
     private String id;
     private String uname;
-    private String credits;
-    private String rank;
+    private int number;
 
-    public Performance() {
+    public Tasks() {
     }
 
-    public Performance(String uname, String credits, String rank){
+    public Tasks(String uname, int number){
         this.uname = uname;
-        this.credits = credits;
-        this.rank = rank;
+        this.number = number;
     }
 
     public String getId(){
@@ -39,20 +37,12 @@ public class Performance {
         this.uname = uname;
     }
 
-    public String getCredits(){
-        return credits;
+    public int getNumber(){
+        return number;
     }
 
-    public void setCredits(String credits){
-        this.credits = credits;
-    }
-
-    public String getRank(){
-        return rank;
-    }
-
-    public void setRank(String rank){
-        this.rank = rank;
+    public void setNumber(int number){
+        this.number = number;
     }
 
     
